@@ -20,8 +20,14 @@ public class Frame extends JFrame{
     JLabel pekerjaan = new JLabel();
     JLabel warga = new JLabel();
     JLabel hingga = new JLabel();
+    JLabel cianjur = new JLabel();
     JLabel gambar = new JLabel();
+    JLabel TTG = new JLabel();
+    JLabel BG = new JLabel();
     ImageIcon pasFoto = new ImageIcon();
+    ImageIcon ttg = new ImageIcon();
+    ImageIcon bg = new ImageIcon();
+
     
     String Provinsi = " PROVINSI JAWA BARAT";
     String Nik = "NIK                            :  3171234567890123";
@@ -37,13 +43,23 @@ public class Frame extends JFrame{
     String Pekerjaan = "Pekerjaan                 :  MAHASISWA";
     String Warga = "Kewarganegaraan   :  WNI";
     String Hingga = "Berlaku Hingga        :  22-02-22025";
+    String Cianjur = "Cianjur";
     
     public Frame(){
         pasFoto = new ImageIcon(this.getClass().getResource("fotoBgRed.png"));
         gambar.setIcon(pasFoto);
-        gambar.setBounds(450, 2, 400, 400);
+        gambar.setBounds(400, 0, 400, 400);
         frame.add(gambar);
+
+        ttg = new ImageIcon(this.getClass().getResource("ttg.png"));
+        TTG.setIcon(ttg);
+        TTG.setBounds(430, 120, 400, 400); 
+        frame.add(TTG);
         
+
+        
+        
+
         provinsi.setText(Provinsi);
         provinsi.setHorizontalAlignment(JLabel.CENTER);
         provinsi.setBounds(40, 0, 500, 100);
@@ -129,7 +145,17 @@ public class Frame extends JFrame{
         hingga.setBounds(20, 280, 500, 100);
         hingga.setBackground(Color.BLUE);
         frame.add(hingga);
-        
+
+        cianjur.setText(Cianjur);
+        cianjur.setHorizontalAlignment(JLabel.RIGHT);
+        cianjur.setBounds(449, 235, 50, 100);
+        cianjur.setBackground(Color.BLUE);
+        frame.add(cianjur);
+
+        bg = new ImageIcon(this.getClass().getResource("bg.png"));
+        BG.setIcon(bg);
+        BG.setBounds(0, 0, 600, 400); 
+        frame.add(BG);
         setFrame();
     }
     
@@ -138,7 +164,7 @@ public class Frame extends JFrame{
         frame.setLayout(null);
         frame.getContentPane().setBackground(Color.BLUE);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
-        frame.setResizable(false);
+        // frame.setResizable(false);
         frame.setSize(600, 400);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
